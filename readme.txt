@@ -1,6 +1,6 @@
 How to use sprite-sorter:
-1. Program is installed and working on AnyDesk 1968185679 (Paul's workstation)
-2. Navigate to program location in command line "cd C:/Users/BB/Documents/Paul/sprite-sorting/sprite-sorter"
+1. Program is installed and working on AnyDesk [redacted] (Paul's workstation)
+2. Navigate to program location in command line "cd [redacted]"
 3. Activate conda environment "conda activate myenv"
 4. Run command "python main.py"
 5. Interact with GUI and see progress of sorting in cmd
