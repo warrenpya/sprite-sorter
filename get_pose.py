@@ -80,24 +80,16 @@ def is_crouching_or_bending(box,keypoints):
     # determine if crouching
 
     # if left side hip and knee angles are small
-    # print(f"left side hip angle is {hip_angle_l} and knee angle is {knee_angle_l} so ")
     if hip_angle_l < 85:
         if knee_angle_l < 85:
-            # print("player is crouching")
             return 1
-        # print("player is bending")
         return 2
 
     # if left side hip and knee angles are small
-    # print(f"right side hip angle is {hip_angle_r} and knee angle is {knee_angle_r} so ")
     if hip_angle_r < 85:
         if knee_angle_r < 85:
-            # print("player is crouching")
             return 1
-        # print("player is bending")
         return 2
-
-    # print("player is not bending or crouching")
     return -1
 
 
@@ -112,16 +104,11 @@ def is_kneeling(box,keypoints):
 
     # determine if kneeling
     if (left_ankle_height - left_knee_height < 0.1) and left_knee_height > 0.85 :
-        # print(f"left_knee_height: {left_knee_height}, ankle knee diff: {left_ankle_height - left_knee_height}")
-        # print("so kneeling")
         return True
     if (right_ankle_height - right_knee_height < 0.1) and right_knee_height > 0.85 :
-        # print(f"right_knee_height: {right_knee_height}, ankle knee diff: {right_ankle_height - right_knee_height}")
-        # print("so kneeling")
         return True
 
-    # print(f"right_knee_height: {right_knee_height}, ankle knee diff: {right_ankle_height - right_knee_height}")
-    # print("so not kneeling")
+
     return False
 
 def is_sitting(box,keypoints):
